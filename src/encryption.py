@@ -2,13 +2,11 @@
 加密的那个
 """
 
-# import re
+import re
 
-# input_str = re.sub(r'\s', "", input("Please input the string: "))
+secret_key = re.sub(r'\s', "", input("Please input the secret_key: "))
 
-secret_key = "feather"
-
-plaintext = "c language is wonderful."
+plain_text = re.sub(r'\s', "", input("Please input the plain_text: "))
 
 alphabet_set = list("abcdefghijklmnopqrstuvwxyz")
 
@@ -33,10 +31,11 @@ for index, item in enumerate(alphabet_set):
     if not key_map.get(item):
         key_map[item] = key
 
-ciphertext_list = list(plaintext)
-for index, key in enumerate(ciphertext_list):
+cipher_text_list = list(plain_text)
+for index, key in enumerate(cipher_text_list):
     if key in key_map:
-        ciphertext_list[index] = key_map[key]
+        cipher_text_list[index] = key_map[key]
 
-ciphertext = "".join(ciphertext_list)
-print(ciphertext)
+cipher_text = "".join(cipher_text_list)
+
+print(cipher_text)
