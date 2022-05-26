@@ -2,11 +2,12 @@
 装水的那个
 """
 
-input_list = ["3", "1", "2", "5", "2", "4"]
+import re
 
+input_list = input("Please input the list: ").split(" ")
+input_list = [re.sub(r'\s', "", item) for item in input_list]
+input_list = list(filter(lambda x: x, input_list))
 input_list = [int(item) - 1 for item in input_list]
-
-print(input_list)
 
 water_number = 0
 
