@@ -6,7 +6,7 @@ import re
 
 secret_key = re.sub(r'\s', "", input("Please input the secret_key: "))
 
-plain_text = re.sub(r'\s', "", input("Please input the plain_text: "))
+plain_text = re.sub(r'[\r\n]', "", input("Please input the plain_text: "))
 
 alphabet_set = list("abcdefghijklmnopqrstuvwxyz")
 
